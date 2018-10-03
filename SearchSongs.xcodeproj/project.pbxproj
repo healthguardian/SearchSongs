@@ -17,6 +17,7 @@
 		0269BC8221651BC100567DAD /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0269BC8121651BC100567DAD /* Album.swift */; };
 		0269BC8421651F3B00567DAD /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0269BC8321651F3B00567DAD /* Song.swift */; };
 		0269BC86216521B000567DAD /* Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0269BC85216521B000567DAD /* Stub.swift */; };
+		0269BC88216524D000567DAD /* SearchResultsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0269BC87216524D000567DAD /* SearchResultsController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		0269BC8121651BC100567DAD /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		0269BC8321651F3B00567DAD /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 		0269BC85216521B000567DAD /* Stub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stub.swift; sourceTree = "<group>"; };
+		0269BC87216524D000567DAD /* SearchResultsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,11 +66,10 @@
 		0269BC672165191300567DAD /* SearchSongs */ = {
 			isa = PBXGroup;
 			children = (
+				0269BC682165191300567DAD /* AppDelegate.swift */,
 				0269BC7C216519B200567DAD /* Controllers */,
 				0269BC7B216519A700567DAD /* Views */,
 				0269BC7A216519A000567DAD /* Models */,
-				0269BC682165191300567DAD /* AppDelegate.swift */,
-				0269BC6A2165191300567DAD /* ViewController.swift */,
 				0269BC6C2165191300567DAD /* Main.storyboard */,
 				0269BC6F2165191500567DAD /* Assets.xcassets */,
 				0269BC712165191500567DAD /* LaunchScreen.storyboard */,
@@ -99,6 +100,8 @@
 		0269BC7C216519B200567DAD /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				0269BC6A2165191300567DAD /* ViewController.swift */,
+				0269BC87216524D000567DAD /* SearchResultsController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -178,6 +181,7 @@
 				0269BC7E216519C500567DAD /* Artist.swift in Sources */,
 				0269BC6B2165191300567DAD /* ViewController.swift in Sources */,
 				0269BC692165191300567DAD /* AppDelegate.swift in Sources */,
+				0269BC88216524D000567DAD /* SearchResultsController.swift in Sources */,
 				0269BC8021651B0700567DAD /* Genre.swift in Sources */,
 				0269BC8221651BC100567DAD /* Album.swift in Sources */,
 				0269BC86216521B000567DAD /* Stub.swift in Sources */,
