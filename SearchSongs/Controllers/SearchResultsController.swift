@@ -11,24 +11,50 @@ import UIKit
 class SearchResultsController: UITableViewController {
     
     let searchController = UISearchController(searchResultsController: nil)
+    let dataSource = SearchResultsDataSource()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(SearchResultsController.dismissSearchResultsController))
         
-        // Assign the search bar to the header of table view
+        // Assigns the search bar to the header of table view
         tableView.tableHeaderView = searchController.searchBar
         
-        // Remove the dim background during presentation
+        // Assigns cancel button to the right bar button item of searchController
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(SearchResultsController.dismissSearchResultsController))
+        
+        // Removes the dim background during presentation
         searchController.dimsBackgroundDuringPresentation = false
         
-        // Assign the SearchResultsController as the SearchResultsUpdater
+        // Assigns the SearchResultsController as the SearchResultsUpdater
         searchController.searchResultsUpdater = self
+        
+        // Assigns our SearchResultsDataSource to the table view
+        tableView.dataSource = dataSource
+        
+        // Indicates wether this VC's view is covered when the VC or one its descendants presents another VC
+        definesPresentationContext = true
     }
     
     @objc func dismissSearchResultsController() {
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    // MARK: - Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showAlbums" {
+            // Check for the indexPath of the selected row and assign it to indexPath
+            if let indexPath = tableView.indexPathForSelectedRow {
+                // Assign value of artist at the indexPath
+                let artist = dataSource.artist(at: indexPath)
+                // This is where we set up our API call but for now we use our Stub Data
+                artist.albums = Stub.albums
+                
+                // Now we have a fully modeled artist object containing albums and we can assign this artists containing the albums to the AlbumListController, querying the destination property on the segue. 
+                let albumListController = segue.destination as! AlbumListController
+                albumListController.artist = artist
+            }
+        }
     }
 }
 
@@ -38,7 +64,13 @@ extension SearchResultsController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         
         // Print search queries in the console anytime it comes up
-        print(searchController.searchBar.text)
+        // print(searchController.searchBar.text)
+        
+        // Update search results with on stub data
+        dataSource.update(with: [Stub.artist])
+        
+        // Reload our search results into the view
+        tableView.reloadData()
     }
 }
 
