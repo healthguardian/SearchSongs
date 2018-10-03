@@ -12,6 +12,9 @@
 		0269BC6E2165191300567DAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0269BC6C2165191300567DAD /* Main.storyboard */; };
 		0269BC702165191500567DAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0269BC6F2165191500567DAD /* Assets.xcassets */; };
 		0269BC732165191500567DAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0269BC712165191500567DAD /* LaunchScreen.storyboard */; };
+		0269BC7E216519C500567DAD /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0269BC7D216519C500567DAD /* Artist.swift */; };
+		0269BC8021651B0700567DAD /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0269BC7F21651B0700567DAD /* Genre.swift */; };
+		0269BC8221651BC100567DAD /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0269BC8121651BC100567DAD /* Album.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		0269BC6F2165191500567DAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0269BC722165191500567DAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0269BC742165191500567DAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0269BC7D216519C500567DAD /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
+		0269BC7F21651B0700567DAD /* Genre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
+		0269BC8121651BC100567DAD /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +60,9 @@
 		0269BC672165191300567DAD /* SearchSongs */ = {
 			isa = PBXGroup;
 			children = (
+				0269BC7C216519B200567DAD /* Controllers */,
+				0269BC7B216519A700567DAD /* Views */,
+				0269BC7A216519A000567DAD /* Models */,
 				0269BC682165191300567DAD /* AppDelegate.swift */,
 				0269BC6A2165191300567DAD /* ViewController.swift */,
 				0269BC6C2165191300567DAD /* Main.storyboard */,
@@ -62,6 +71,30 @@
 				0269BC742165191500567DAD /* Info.plist */,
 			);
 			path = SearchSongs;
+			sourceTree = "<group>";
+		};
+		0269BC7A216519A000567DAD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0269BC7D216519C500567DAD /* Artist.swift */,
+				0269BC8121651BC100567DAD /* Album.swift */,
+				0269BC7F21651B0700567DAD /* Genre.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0269BC7B216519A700567DAD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0269BC7C216519B200567DAD /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +168,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0269BC7E216519C500567DAD /* Artist.swift in Sources */,
 				0269BC6B2165191300567DAD /* ViewController.swift in Sources */,
 				0269BC692165191300567DAD /* AppDelegate.swift in Sources */,
+				0269BC8021651B0700567DAD /* Genre.swift in Sources */,
+				0269BC8221651BC100567DAD /* Album.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
