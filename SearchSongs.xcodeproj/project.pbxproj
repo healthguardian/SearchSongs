@@ -33,6 +33,9 @@
 		0269BCA62166693B00567DAD /* ItunesEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0269BCA52166693B00567DAD /* ItunesEntity.swift */; };
 		0269BCA821666D1F00567DAD /* QueryItemProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0269BCA721666D1F00567DAD /* QueryItemProvider.swift */; };
 		0269BCAA21666F4200567DAD /* ItunesAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0269BCA921666F4200567DAD /* ItunesAttributes.swift */; };
+		0269BCAD2166726100567DAD /* JSONDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0269BCAC2166726100567DAD /* JSONDownloader.swift */; };
+		0269BCAF216672E400567DAD /* ItunesError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0269BCAE216672E400567DAD /* ItunesError.swift */; };
+		0269BCB12166738900567DAD /* ItunesAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0269BCB02166738900567DAD /* ItunesAPIClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +67,9 @@
 		0269BCA52166693B00567DAD /* ItunesEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItunesEntity.swift; sourceTree = "<group>"; };
 		0269BCA721666D1F00567DAD /* QueryItemProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryItemProvider.swift; sourceTree = "<group>"; };
 		0269BCA921666F4200567DAD /* ItunesAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItunesAttributes.swift; sourceTree = "<group>"; };
+		0269BCAC2166726100567DAD /* JSONDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDownloader.swift; sourceTree = "<group>"; };
+		0269BCAE216672E400567DAD /* ItunesError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItunesError.swift; sourceTree = "<group>"; };
+		0269BCB02166738900567DAD /* ItunesAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItunesAPIClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +105,7 @@
 				0269BC682165191300567DAD /* AppDelegate.swift */,
 				0269BC7C216519B200567DAD /* Controllers */,
 				0269BC8A21652A2100567DAD /* Data Sources */,
+				0269BCAB2166724400567DAD /* Networking */,
 				0269BC7B216519A700567DAD /* Views */,
 				0269BC93216548AA00567DAD /* View Models */,
 				0269BC7A216519A000567DAD /* Models */,
@@ -175,6 +182,16 @@
 			path = Endpoint;
 			sourceTree = "<group>";
 		};
+		0269BCAB2166724400567DAD /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				0269BCB02166738900567DAD /* ItunesAPIClient.swift */,
+				0269BCAE216672E400567DAD /* ItunesError.swift */,
+				0269BCAC2166726100567DAD /* JSONDownloader.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -246,6 +263,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0269BCAF216672E400567DAD /* ItunesError.swift in Sources */,
+				0269BCAD2166726100567DAD /* JSONDownloader.swift in Sources */,
 				0269BC8421651F3B00567DAD /* Song.swift in Sources */,
 				0269BC7E216519C500567DAD /* Artist.swift in Sources */,
 				0269BC6B2165191300567DAD /* ViewController.swift in Sources */,
@@ -259,6 +278,7 @@
 				0269BC9F2165579700567DAD /* SongViewModel.swift in Sources */,
 				0269BC97216551E000567DAD /* AlbumDetailController.swift in Sources */,
 				0269BC88216524D000567DAD /* SearchResultsController.swift in Sources */,
+				0269BCB12166738900567DAD /* ItunesAPIClient.swift in Sources */,
 				0269BC8E2165450B00567DAD /* AlbumListController.swift in Sources */,
 				0269BC9D2165569100567DAD /* SongCell.swift in Sources */,
 				0269BC8021651B0700567DAD /* Genre.swift in Sources */,
