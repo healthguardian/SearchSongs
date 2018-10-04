@@ -48,12 +48,13 @@ class SearchResultsController: UITableViewController {
             if let indexPath = tableView.indexPathForSelectedRow {
                 // Assign value of artist at the indexPath
                 let artist = dataSource.artist(at: indexPath)
-                // This is where we set up our API call but for now we use our Stub Data
-                artist.albums = Stub.albums
-                
-                // Now we have a fully modeled artist object containing albums and we can assign this artists containing the albums to the AlbumListController, querying the destination property on the segue. 
                 let albumListController = segue.destination as! AlbumListController
-                albumListController.artist = artist
+                
+                // This is where we set up our API call
+                client.lookupArtist(withId: artist.id) { artist, error in
+                    albumListController.artist = artist
+                    albumListController.tableView.reloadData()
+                }
             }
         }
     }

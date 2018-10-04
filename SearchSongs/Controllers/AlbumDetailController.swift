@@ -10,12 +10,18 @@ import UIKit
 
 class AlbumDetailController: UITableViewController {
     
-    // Create a stored property to hold on to the instance of album
-    var album: Album?
+
+    var album: Album? {
+        didSet {
+            if let album = album {
+                configure(with: album)
+                dataSource.update(with: album.songs)
+                tableView.reloadData()
+            }
+        }
+    }
     
-    lazy var dataSource: AlbumDetailDataSource = {
-        return AlbumDetailDataSource(songs: self.album!.songs)
-    }()
+    var dataSource = AlbumDetailDataSource(songs: [])
     
     @IBOutlet weak var artworkView: UIImageView!
     @IBOutlet weak var albumTitleLabel: UILabel!
